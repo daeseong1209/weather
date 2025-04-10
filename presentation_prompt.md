@@ -18,7 +18,7 @@
   * Frontend: HTML5/CSS3/JavaScript (반응형 웹 디자인)
   * Backend: Node.js + Express.js
   * 데이터베이스: SQLite
-  * 외부 API: Open-Meteo API, Nominatim API
+  * 외부 API: Open-Meteo API (날씨 데이터), Geocoding API (도시 정보)
 
 ## 3. 시스템 아키텍처 (45초)
 - 전체 시스템 구조도
@@ -26,7 +26,7 @@
   * RESTful API 설계
 - 데이터 흐름도
   * 날씨 데이터 수집 (Open-Meteo API) → 처리 → 사용자 전달
-  * 도시 검색 (Nominatim API) → 즐겨찾기 저장 → 사용자 제공
+  * 도시 검색 (Geocoding API) → 즐겨찾기 저장 → 사용자 제공
 - 주요 API 엔드포인트 설명
   * 인증 API: 회원가입, 로그인
   * 날씨 API: 현재 날씨, 날씨 예보
@@ -38,7 +38,7 @@
   * 실시간 날씨 정보 수집
   * 날씨 예보 데이터 처리
 - 도시 관리 기능
-  * Nominatim API를 활용한 도시 검색
+  * Geocoding API를 활용한 도시 검색
   * 즐겨찾기 도시 관리
 - 사용자 인터페이스
   * 반응형 웹 디자인
