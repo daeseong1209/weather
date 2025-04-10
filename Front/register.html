@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날씨 앱 - 회원가입</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <script>
+        // 전역 변수로 API URL 설정
+        const API_BASE_URL = 'http://localhost:3000/api';
+    </script>
+    <script src="js/register.js" defer></script>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <h1>회원가입</h1>
+            <form id="registerForm" class="auth-form">
+                <div class="form-group">
+                    <label for="name">이름</label>
+                    <input type="text" id="name" name="name" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" name="email" required autocomplete="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">비밀번호</label>
+                    <input type="password" id="password" name="password" required 
+                           minlength="8" placeholder="8자 이상 입력해주세요" autocomplete="new-password">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">비밀번호 확인</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required 
+                           autocomplete="new-password">
+                </div>
+                <div id="errorMessage" class="error-message" style="display: none;"></div>
+                <button type="submit" class="auth-button">가입하기</button>
+            </form>
+            <div class="auth-links">
+                <a href="login.html">로그인으로 돌아가기</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

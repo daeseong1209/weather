@@ -1,0 +1,375 @@
+/* 날씨 정보 스타일 */
+.weather-content {
+    display: grid;
+    gap: 1rem;
+}
+
+/* 현재 날씨 */
+.current-weather .weather-content {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    align-items: center;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.weather-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 0.5rem;
+}
+
+.temperature {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.weather-description {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.weather-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+}
+
+.detail-label {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.detail-value {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* 날씨 예보 */
+.weather-forecast .weather-content {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.forecast-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+    text-align: center;
+}
+
+.forecast-date {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.forecast-temp {
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem 0;
+}
+
+.temp-max {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.temp-min {
+    color: var(--text-color);
+}
+
+/* 즐겨찾기 도시 */
+.cities-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.favorite-city {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+}
+
+.city-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.city-name {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.city-country {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.remove-favorite {
+    background: none;
+    border: none;
+    color: var(--error-color);
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s;
+}
+
+.remove-favorite:hover {
+    color: #c0392b;
+}
+
+/* 날씨 예보 그리드 */
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    margin-top: 2rem;
+}
+
+/* 예보 블록 */
+.forecast-block {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.forecast-block:hover {
+    transform: translateY(-5px);
+}
+
+.forecast-block.today {
+    background: rgba(66, 135, 245, 0.2);
+    border: 2px solid rgba(66, 135, 245, 0.5);
+}
+
+.forecast-block.past {
+    background: rgba(128, 128, 128, 0.2);
+    opacity: 0.8;
+}
+
+.forecast-block.past .forecast-date {
+    color: #999;
+}
+
+.forecast-block.past .temp-value {
+    color: #999 !important;
+}
+
+.forecast-block.past .precip-value {
+    color: #999 !important;
+}
+
+/* 날짜 */
+.forecast-date {
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* 날씨 아이콘 */
+.forecast-icon {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+/* 온도 정보 */
+.forecast-temps {
+    margin: 0.5rem 0;
+}
+
+.temp-max, .temp-min {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 0;
+}
+
+.temp-label {
+    color: #ccc;
+    font-size: 0.8rem;
+}
+
+.temp-value {
+    font-weight: bold;
+    color: #fff;
+}
+
+.temp-max .temp-value {
+    color: #ff6b6b;
+}
+
+.temp-min .temp-value {
+    color: #4dabf7;
+}
+
+/* 강수 확률 */
+.forecast-precip {
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.precip-label {
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+.precip-value {
+    color: #74c0fc;
+    font-weight: bold;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1024px) {
+    .forecast-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .forecast-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .forecast-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 현재 날씨 카드 */
+.current-weather-card {
+    background: linear-gradient(135deg, rgba(32, 32, 32, 0.8) 0%, rgba(24, 24, 24, 0.9) 100%);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 400px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.current-weather-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.weather-icon-temp {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.current-weather-icon {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.current-temperature {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.current-weather-desc {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+.current-weather-details {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.weather-detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.weather-detail-item .weather-icon {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+.detail-value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.detail-label {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* 호버 효과 */
+.current-weather-card:hover {
+    transform: translateY(-2px);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 480px) {
+    .current-weather-card {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+
+    .current-temperature {
+        font-size: 2.5rem;
+    }
+
+    .current-weather-icon {
+        font-size: 2.5rem;
+    }
+
+    .current-weather-details {
+        gap: 1.5rem;
+    }
+} 

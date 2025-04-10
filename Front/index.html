@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날씨 앱</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/weather.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div id="app">
+        <!-- 메인 페이지 -->
+        <div id="main-page" class="page">
+            <header class="header">
+                <h1>날씨 앱</h1>
+                <div class="user-info">
+                    <span id="user-name"></span>
+                    <button id="logout-btn" class="btn-secondary">로그아웃</button>
+                </div>
+            </header>
+
+            <main class="main-content">
+                <!-- 도시 검색 -->
+                <div class="search-section">
+                    <input type="text" id="city-search" placeholder="도시 검색...">
+                    <div id="search-results" class="search-results"></div>
+                </div>
+
+                <!-- 현재 날씨 -->
+                <div class="current-weather">
+                    <h2>현재 날씨</h2>
+                    <div id="current-weather-content" class="weather-content"></div>
+                </div>
+
+                <!-- 날씨 예보 -->
+                <div class="weather-forecast">
+                    <h2>날씨 예보</h2>
+                    <div id="forecast-content" class="weather-content"></div>
+                </div>
+
+                <!-- 즐겨찾기 도시 -->
+                <div class="favorite-cities">
+                    <h2>즐겨찾기 도시</h2>
+                    <div id="favorite-cities-content" class="cities-content"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/api.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/cities.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
